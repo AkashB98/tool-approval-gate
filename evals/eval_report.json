@@ -1,0 +1,177 @@
+{
+  "evals": [
+    {
+      "actual": {
+        "rule": "read-only tools",
+        "verdict": "allowed"
+      },
+      "detail": "",
+      "expected": {
+        "rule": "read-only tools",
+        "verdict": "allowed"
+      },
+      "name": "allow_read",
+      "passed": true
+    },
+    {
+      "actual": {
+        "rule": "no prod deletes",
+        "verdict": "denied"
+      },
+      "detail": "",
+      "expected": {
+        "rule": "no prod deletes",
+        "verdict": "denied"
+      },
+      "name": "deny_prod_delete",
+      "passed": true
+    },
+    {
+      "actual": {
+        "final": "allowed",
+        "pending": {
+          "request_id": "apr-0001",
+          "verdict": "pending_approval"
+        }
+      },
+      "detail": "",
+      "expected": {
+        "final": "allowed",
+        "pending": {
+          "request_id": "apr-0001",
+          "verdict": "pending_approval"
+        }
+      },
+      "name": "approve_in_time",
+      "passed": true
+    },
+    {
+      "actual": {
+        "final": "denied"
+      },
+      "detail": "",
+      "expected": {
+        "final": "denied"
+      },
+      "name": "reject",
+      "passed": true
+    },
+    {
+      "actual": {
+        "final": "denied",
+        "timeout_noted": true
+      },
+      "detail": "",
+      "expected": {
+        "final": "denied",
+        "timeout_noted": true
+      },
+      "name": "timeout_deny",
+      "passed": true
+    },
+    {
+      "actual": {
+        "after_timeout": "pending_approval",
+        "final": "allowed",
+        "tier": 2
+      },
+      "detail": "",
+      "expected": {
+        "after_timeout": "pending_approval",
+        "final": "allowed",
+        "tier": 2
+      },
+      "name": "escalate_tier2_approve",
+      "passed": true
+    },
+    {
+      "actual": {
+        "final": "denied"
+      },
+      "detail": "",
+      "expected": {
+        "final": "denied"
+      },
+      "name": "tier2_timeout_deny",
+      "passed": true
+    },
+    {
+      "actual": {
+        "new_requests": 0,
+        "replayed": true,
+        "verdict": "allowed"
+      },
+      "detail": "",
+      "expected": {
+        "new_requests": 0,
+        "replayed": true,
+        "verdict": "allowed"
+      },
+      "name": "idempotent_replay",
+      "passed": true
+    },
+    {
+      "actual": {
+        "rule": "(default)",
+        "verdict": "pending_approval"
+      },
+      "detail": "",
+      "expected": {
+        "rule": "(default)",
+        "verdict": "pending_approval"
+      },
+      "name": "default_action",
+      "passed": true
+    },
+    {
+      "actual": {
+        "finding_codes": [
+          "LINT-001",
+          "LINT-002",
+          "LINT-004",
+          "LINT-005",
+          "LINT-006",
+          "LINT-006",
+          "LINT-007",
+          "LINT-007",
+          "LINT-007",
+          "LINT-007"
+        ]
+      },
+      "detail": "",
+      "expected": {
+        "finding_codes": [
+          "LINT-001",
+          "LINT-002",
+          "LINT-004",
+          "LINT-005",
+          "LINT-006",
+          "LINT-006",
+          "LINT-007",
+          "LINT-007",
+          "LINT-007",
+          "LINT-007"
+        ]
+      },
+      "name": "lint_fixture",
+      "passed": true
+    },
+    {
+      "actual": {
+        "chain_md5": "d5a0cc0846679b35dda7faec44002ef9",
+        "chain_ok": true,
+        "record_count": 5
+      },
+      "detail": "",
+      "expected": {
+        "chain_md5": "d5a0cc0846679b35dda7faec44002ef9",
+        "chain_ok": true,
+        "record_count": 5
+      },
+      "name": "audit_chain",
+      "passed": true
+    }
+  ],
+  "passed": 11,
+  "total": 11
+}
