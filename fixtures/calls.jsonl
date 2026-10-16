@@ -1,0 +1,7 @@
+{"actor": "agent", "args": {"order_id": "H-1001"}, "tool": "helios.get_order"}
+{"actor": "agent", "args": {"amount": 1200, "order_id": "H-1002"}, "tool": "billing.refund"}
+{"actor": "agent", "args": {"amount": 40, "order_id": "H-1003"}, "tool": "billing.refund"}
+{"actor": "agent", "args": {"customer_id": "C-9", "env": "prod"}, "tool": "db.delete_customer"}
+{"actor": "agent", "args": {"env": "dev", "table": "orders"}, "tool": "db.truncate"}
+{"actor": "agent", "args": {"qty": 50, "sku": "HELIOS-PRO"}, "tool": "warehouse.ship_high_value"}
+{"actor": "agent", "args": {"to": "friend@example.com"}, "tool": "email.send"}
